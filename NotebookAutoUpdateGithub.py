@@ -3,13 +3,10 @@ import os
 import json
 import requests
 import base64
+import gdown
 
 # For Enviroment Variable
 from dotenv import load_dotenv
-
-# Data and Time
-from datetime import datetime
-import pytz
 
 gdown.download(f"https://drive.google.com/uc?id=1wzFxm8CNXbVk_iCuHFpjtI2Kdqo7o5px", quiet=True)
 gdown.download(f"https://drive.google.com/uc?id=1vMaNT433-VxQeM6udAi7CwaGyN2E7g4W", quiet=True) 
