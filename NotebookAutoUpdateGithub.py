@@ -14,7 +14,7 @@ import pytz
 
 def my_date_time():
   #  Nov 1, 2024
-    date_time_format = "%e %B %Y, %I:%M %p"  
+    date_time_format = "%b %e, %I:%M %p"  
     current_time = datetime.now( pytz.timezone("Asia/Kolkata") )
     return current_time.strftime(date_time_format)
 
