@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 from datetime import datetime
 import pytz
 
+gdown.download(f"https://drive.google.com/uc?id=1wzFxm8CNXbVk_iCuHFpjtI2Kdqo7o5px", quiet=True)
+gdown.download(f"https://drive.google.com/uc?id=1vMaNT433-VxQeM6udAi7CwaGyN2E7g4W", quiet=True) 
 
 def my_date_time():
   #  Nov 1, 2024
