@@ -4,12 +4,9 @@ import json
 import requests
 import base64
 import gdown
+import pytz
 
-# For Enviroment Variable
 from dotenv import load_dotenv
-
-# For Data Time
-import os, pytz
 from datetime import datetime
 
 gdown.download(f"https://drive.google.com/uc?id=1wzFxm8CNXbVk_iCuHFpjtI2Kdqo7o5px", quiet=True)
@@ -71,18 +68,18 @@ def upload_to_github(github_token, repo_owner, repo_name, file_path, commit_mess
         response = requests.put(api_url, headers=headers, data=json.dumps(data))
 
         if response.status_code in [200, 201]:
-            print(f"✅ Successfully uploaded {notebook_name} to GitHub!")
+            print(f"Successfully uploaded {notebook_name} to GitHub!")
             return True
         else:
-            print(f"❌ Upload failed. Status code: {response.status_code}")
+            print(f"Upload failed. Status code: {response.status_code}")
             print(response.text)
             return False
 
     except FileNotFoundError:
-        print(f"❌ Error: Notebook not found at {notebook_path}")
+        print(f"Error: Notebook not found at {notebook_path}")
         print("Checking available files in /content directory:")
         print(os.listdir('/content'))
         return False
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
         return False
