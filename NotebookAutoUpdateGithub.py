@@ -8,6 +8,10 @@ import gdown
 # For Enviroment Variable
 from dotenv import load_dotenv
 
+# For Data Time
+import os, pytz
+from datetime import datetime
+
 gdown.download(f"https://drive.google.com/uc?id=1wzFxm8CNXbVk_iCuHFpjtI2Kdqo7o5px", quiet=True)
 gdown.download(f"https://drive.google.com/uc?id=1vMaNT433-VxQeM6udAi7CwaGyN2E7g4W", quiet=True) 
 
