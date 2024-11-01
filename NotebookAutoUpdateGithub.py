@@ -5,7 +5,6 @@ import requests
 import base64
 
 # For Enviroment Variable
-!pip install python-dotenv
 from dotenv import load_dotenv
 
 # Data and Time
