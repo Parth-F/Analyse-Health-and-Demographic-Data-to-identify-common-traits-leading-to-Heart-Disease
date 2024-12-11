@@ -1,9 +1,7 @@
 # For API funcitons
-import os
 import json
 import requests
 import base64
-import pytz
 
 from dotenv import load_dotenv
 from datetime import datetime
@@ -20,7 +18,7 @@ def upload_to_github(github_token, repo_owner, repo_name, file_path, commit_mess
     # Checking if env variable already exist, if yes, replace it
     os.environ.pop('SecretKey.env', None)
 
-    load_dotenv('/content/drive/MyDrive/Data/SecretKey.env')
+    load_dotenv('/content/drive/MyDrive/Project/Heart_ML/SecretKey.env')
     headers = {
         "Authorization": f"token {os.getenv('SecretKey')}",
         "Accept": "application/vnd.github.v3+json"
