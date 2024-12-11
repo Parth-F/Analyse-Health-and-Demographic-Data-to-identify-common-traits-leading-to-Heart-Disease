@@ -3,14 +3,10 @@ import os
 import json
 import requests
 import base64
-import gdown
 import pytz
 
 from dotenv import load_dotenv
 from datetime import datetime
-
-gdown.download(f"https://drive.google.com/uc?id=1wzFxm8CNXbVk_iCuHFpjtI2Kdqo7o5px", quiet=True)
-gdown.download(f"https://drive.google.com/uc?id=1vMaNT433-VxQeM6udAi7CwaGyN2E7g4W", quiet=True) 
 
 def my_date_time():
   #  Nov 1, 2024
@@ -22,30 +18,28 @@ def upload_to_github(github_token, repo_owner, repo_name, file_path, commit_mess
     api_url = "https://api.github.com/repos/parth-f/Analyse-Health-and-Demographic-Data-to-identify-common-traits-leading-to-Heart-Disease/contents/Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease_Practo_Certified.ipynb"
 
     # Checking if env variable already exist, if yes, replace it
-    os.environ.pop('SecretKey.env', None)
+    # os.environ.pop('SecretKey.env', None)
 
-    load_dotenv('/content/SecretKey.env')
+    load_dotenv('/content/drive/MyDrive/Data/SecretKey.env')
     headers = {
         "Authorization": f"token {os.getenv('SecretKey')}",
         "Accept": "application/vnd.github.v3+json"
     }
-
-    if os.path.exists('/content/SecretKey.env'):
-      os.remove('/content/SecretKey.env')
-
+  
     notebook_name = 'Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease-Practo_Certified.ipynb'
     # Read notebook content
-    notebook_path = f'/content/{notebook_name}'
+    notebook_path = f'/content/drive/MyDrive/Colab Notebooks/{notebook_name}'
+  
     try:
         with open(notebook_path, 'r') as f:
             content = f.read()
 
-        if 'SecretKey.env' in os.listdir('/content'):
-          print(content)
-          print("❌ Sensitive data detected in notebook content. Please remove it before uploading.")
-          return False
-
+        # if 'SecretKey.env' in os.listdir('/content'):
+        #   print(content)
+        #   print("❌ Sensitive data detected in notebook content. Please remove it before uploading.")
+        #   return False
         # Encode content to Base64
+
         content_bytes = content.encode('utf-8')
         content_base64 = base64.b64encode(content_bytes).decode('utf-8')
 
