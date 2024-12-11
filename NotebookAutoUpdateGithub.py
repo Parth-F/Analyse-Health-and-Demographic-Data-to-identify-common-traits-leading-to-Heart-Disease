@@ -5,7 +5,6 @@ import requests
 import base64
 import pytz
 
-%%capture
 !pip install python-dotenv
 
 from dotenv import load_dotenv
