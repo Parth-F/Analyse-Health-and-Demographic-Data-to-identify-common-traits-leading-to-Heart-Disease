@@ -18,7 +18,7 @@ def upload_to_github(github_token, repo_owner, repo_name, file_path, commit_mess
     api_url = "https://api.github.com/repos/parth-f/Analyse-Health-and-Demographic-Data-to-identify-common-traits-leading-to-Heart-Disease/contents/Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease_Practo_Certified.ipynb"
 
     # Checking if env variable already exist, if yes, replace it
-    # os.environ.pop('SecretKey.env', None)
+    os.environ.pop('SecretKey.env', None)
 
     load_dotenv('/content/drive/MyDrive/Data/SecretKey.env')
     headers = {
