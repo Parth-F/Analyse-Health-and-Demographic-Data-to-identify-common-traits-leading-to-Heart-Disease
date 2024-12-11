@@ -37,12 +37,6 @@ def upload_to_github(github_token, repo_owner, repo_name, file_path, commit_mess
         with open(notebook_path, 'r') as f:
             content = f.read()
 
-        # if 'SecretKey.env' in os.listdir('/content'):
-        #   print(content)
-        #   print("❌ Sensitive data detected in notebook content. Please remove it before uploading.")
-        #   return False
-        # Encode content to Base64
-
         content_bytes = content.encode('utf-8')
         content_base64 = base64.b64encode(content_bytes).decode('utf-8')
 
