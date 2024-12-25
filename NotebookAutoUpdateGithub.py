@@ -70,3 +70,11 @@ def upload_to_github(github_token, repo_owner, repo_name, file_path, commit_mess
     except Exception as e:
         print(f"Error: {e}")
         return False
+
+def loading_animation():
+    animation_chars = ['\\', '|', '/', '-']  # Characters for animation
+    for _ in range(20):  # Repeat 20 times (adjust for how long you want the animation)
+        for char in animation_chars:
+            sys.stdout.write(f"\rCreating new dataframe -- {char}")  # Print on the same line
+            sys.stdout.flush()  # Ensure the text is immediately displayed
+            time.sleep(0.1)  # Delay for 0.2 seconds to make the animation visible
