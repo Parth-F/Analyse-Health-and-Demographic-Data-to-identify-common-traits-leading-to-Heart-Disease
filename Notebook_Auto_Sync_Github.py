@@ -14,7 +14,7 @@ def my_date_time():
     return current_time.strftime(date_time_format)
 
 def sync_to_github(github_token, repo_owner, repo_name, file_path, commit_message, branch='main'):
-    api_url = "https://api.github.com/repos/parth-f/Analyse-Health-and-Demographic-Data-to-identify-common-traits-leading-to-Heart-Disease/contents/Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease_Practo_Certified.ipynb"
+    api_url = "https://api.github.com/repos/parth-f/Analyse-Health-and-Demographic-Data-to-identify-common-traits-leading-to-Heart-Disease/contents/Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease.ipynb.ipynb"
 
     # Checking if env variable already exist, if yes, replace it
     os.environ.pop('SecretKey.env', None)
@@ -25,7 +25,8 @@ def sync_to_github(github_token, repo_owner, repo_name, file_path, commit_messag
         "Accept": "application/vnd.github.v3+json"
     }
   
-    notebook_name = 'Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease-Practo_Certified.ipynb'
+  # Heart Disease health Data analysis and predition 
+    notebook_name = 'Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease.ipynb'
     # Read notebook content
     notebook_path = f'/content/drive/MyDrive/Colab Notebooks/{notebook_name}'
   
