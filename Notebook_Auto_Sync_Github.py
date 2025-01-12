@@ -24,8 +24,7 @@ def sync_to_github(github_token, repo_owner, repo_name, file_path, commit_messag
         "Authorization": f"token {os.getenv('SecretKey')}",
         "Accept": "application/vnd.github.v3+json"
     }
-  
-  # Heart Disease health Data analysis and predition 
+   
     notebook_name = 'Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease.ipynb'
     # Read notebook content
     notebook_path = f'/content/drive/MyDrive/Colab Notebooks/{notebook_name}'
