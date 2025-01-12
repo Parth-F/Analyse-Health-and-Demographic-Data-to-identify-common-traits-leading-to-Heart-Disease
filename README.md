@@ -3,5 +3,6 @@ This Project aims to analyze a healthcare dataset using Python to explore the re
 
 [View My Heart Disease Analysis Notebook](Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease_Practo_Certified.ipynb)
 
-[View the PDF](Certification.pdf)
+![View the PDF](Certification.pdf)
+
 
