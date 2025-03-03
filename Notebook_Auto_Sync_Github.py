@@ -27,7 +27,7 @@ def sync_to_github(github_token, repo_owner, repo_name, file_path, commit_messag
    
     notebook_name = 'Analyse_Health_and_Demogrphic_Data_to_identify_common_traits_leading_to_Heart_Disease.ipynb'
     # Read notebook content
-    notebook_path = f'/content/drive/MyDrive/Colab Notebooks/{notebook_name}'
+    notebook_path = f'/content/drive/MyDrive/Project/Heart_ML/{notebook_name}'
   
     try:
         with open(notebook_path, 'r') as f:
